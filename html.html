@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Weather</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div id="time-weather">
+        <h2>Current Time: <span id="current-time"></span></h2>
+        <h2>Weather: <span id="current-weather"></span></h2>
+    </div>
+    <h2>Tasks</h2>
+    <ul id="task-list"></ul>
+    <script>
+        async function fetchTimeWeather() {
+            const response = await fetch('/time-weather');
+            const data = await response.json();
+            document.getElementById('current-time').innerText = data.time;
+            document.getElementById('current-weather').innerText = JSON.stringify(data.weather);
+        }
+
+        async function fetchTasks() {
+            const response = await fetch('/tasks');
+            const tasks = await response.json();
+            const taskList = document.getElementById('task-list');
+            taskList.innerHTML = '';
+            tasks.forEach((task, index) => {
+                const li = document.createElement('li');
+                li.innerText = `${task.title}: ${task.description}`;
+                taskList.appendChild(li);
+            });
+        }
+
+        fetchTimeWeather();
+        fetchTasks();
+    </script>
+</body>
+</html>
