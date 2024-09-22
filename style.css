@@ -1,0 +1,84 @@
+/* CSS styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 400px;
+    min-height: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(251, 251, 251);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+    display: block; /* Center the logo */
+    margin: 0 auto 20px auto; /* Center and add space below */
+    width: 100px; /* Set a width for the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+h1 {
+    text-align: center;
+    color: #7f3030;
+    margin-bottom:30px;
+    font-family:cursive;
+}
+
+input[type="text"], input[type="password"] , input[type="c-password"] {
+    width: 94%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.need-help {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.need-help a {
+    color: #666;
+    text-decoration: none;
+}
+
+.need-help a:hover {
+    color: #333;
+}
+
+.signup {
+    text-align: center; /* Center the signup message */
+    margin-top: 15px; /* Add some space above */
+}
+
+.signup p {
+    color: #666; /* Text color */
+}
+
+.signup a {
+    color: #2196F3; /* Link color matching button */
+    text-decoration: none; /* Remove underline */
+}
+
+.signup a:hover {
+    text-decoration: underline; /* Underline on hover for emphasis */
+}
